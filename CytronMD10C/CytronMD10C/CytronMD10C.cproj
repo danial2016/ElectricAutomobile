@@ -552,10 +552,19 @@
     <Compile Include="src\driving.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="src\encoders.c">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="src\pulse.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\pulse.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\test_cases.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\test_cases.h">
       <SubType>compile</SubType>
     </Compile>
     <None Include="src\ASF\common\services\delay\delay.h">

@@ -96,6 +96,7 @@ SUBDIRS :=  \
 C_SRCS +=  \
 ../src/driving.c \
 ../src/pulse.c \
+../src/test_cases.c \
 ../src/ASF/common/services/delay/sam/cycle_counter.c \
 ../src/ASF/common/utils/stdio/read.c \
 ../src/ASF/sam/drivers/usart/usart.c \
@@ -127,6 +128,7 @@ ASM_SRCS +=
 OBJS +=  \
 src/driving.o \
 src/pulse.o \
+src/test_cases.o \
 src/ASF/common/services/delay/sam/cycle_counter.o \
 src/ASF/common/utils/stdio/read.o \
 src/ASF/sam/drivers/usart/usart.o \
@@ -151,6 +153,7 @@ src/main.o
 OBJS_AS_ARGS +=  \
 src/driving.o \
 src/pulse.o \
+src/test_cases.o \
 src/ASF/common/services/delay/sam/cycle_counter.o \
 src/ASF/common/utils/stdio/read.o \
 src/ASF/sam/drivers/usart/usart.o \
@@ -175,6 +178,7 @@ src/main.o
 C_DEPS +=  \
 src/driving.d \
 src/pulse.d \
+src/test_cases.d \
 src/ASF/common/services/delay/sam/cycle_counter.d \
 src/ASF/common/utils/stdio/read.d \
 src/ASF/sam/drivers/usart/usart.d \
@@ -199,6 +203,7 @@ src/main.d
 C_DEPS_AS_ARGS +=  \
 src/driving.d \
 src/pulse.d \
+src/test_cases.d \
 src/ASF/common/services/delay/sam/cycle_counter.d \
 src/ASF/common/utils/stdio/read.d \
 src/ASF/sam/drivers/usart/usart.d \
@@ -235,6 +240,8 @@ LINKER_SCRIPT_DEP+=  \
 
 
 # AVR32/GNU C Compiler
+
+
 
 
 

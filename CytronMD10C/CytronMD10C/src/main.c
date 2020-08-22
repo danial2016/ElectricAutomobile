@@ -6,6 +6,7 @@
 #include <asf.h>
 #include "driving.h"
 #include "pulse.h"
+#include "test_cases.h"
 
 /**
 * \brief Configure UART for debug message output.
@@ -34,21 +35,11 @@ int main (void)
 	
 	init_motors();
 	int target_speed = 50;
+	
+	// Choose test case from suite for any kind of robot testing
+	test_case_1(target_speed);
 	while (1)
 	{
-		set_direction(FORWARD);
-		accelerate(target_speed);
-		drive_forward(target_speed);
-		delay_ms(5000);
-		int start_speed = target_speed;
-		decelerate(start_speed);
-		set_direction(REVERSE);
-		accelerate(target_speed);
-		drive_backwards(50);
-		delay_ms(5000);	
-		decelerate(start_speed);
-		delay_ms(1000);
 	}
 
-	/* Insert application code here, after the board has been initialized. */
 }

@@ -33,14 +33,14 @@ void set_direction(int dir)
 {
 	if(dir == FORWARD)
 	{
-		// dunno why they're opposites ...
-		ioport_set_pin_level(DIR_pin_MotorA, 0);
-		ioport_set_pin_level(DIR_pin_MotorB, 1);
+		// don't remember why they're opposites ...
+		ioport_set_pin_level(DIR_pin_MotorA, 1);
+		ioport_set_pin_level(DIR_pin_MotorB, 0);
 	}
 	if(dir == REVERSE)
 	{
-		ioport_set_pin_level(DIR_pin_MotorA, 1);
-		ioport_set_pin_level(DIR_pin_MotorB, 0);
+		ioport_set_pin_level(DIR_pin_MotorA, 0);
+		ioport_set_pin_level(DIR_pin_MotorB, 1);
 	}
 }
 

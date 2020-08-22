@@ -6,6 +6,8 @@ src\driving.c
 
 src\pulse.c
 
+src\test_cases.c
+
 src\ASF\common\services\delay\sam\cycle_counter.c
 
 src\ASF\common\utils\stdio\read.c
