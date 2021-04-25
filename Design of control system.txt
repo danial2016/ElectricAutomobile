@@ -1,0 +1,10 @@
+========================== DESIGN OF CONTROL SYSTEM ==========================
+1. Figure out the process variable (reglerade storheten?). Put a unit on it!
+2. Draw block scheme with all the variables and components there. Preferably from a physical viewpoint, i.e. with actuators, sensors ...
+3. Decide if feedback sensors are linear or not, i.e. is the generated sensor signal (voltage, encoder pulses etc.) proportional to the process variable (velocity, water level, position etc.). If yes, in what range? If not, is it possible to linearize using a experimentally produced function? If non-linear, they are hopefully not too non-linear.
+4. Before choosing the type of controller decide if the system (process you wish to control) is integrating or non-integrating. 
+5. Choose a controller type: P, PI, PD or PID. P can't do jack for non-integrating systems, it will lead to a steady-state error but it should work fine for integrating systems. A PID controller is an good choice if the output variable that is under control is not easily modeled, but the system characteristics will not change over time. The numeric theory around PID controllers uses a model of the world as a linear, time-invariant system.
+6. Prior to the actual modelling, it might be worthwhile to pay attention to a practical aspect, which is uncomplicated, but nevertheless a frequent cause of control system implementation errors: UNIT CONVERSION. In physical reality we deal with signals of diverse units, such as levels [m], flows (m3), and voltages [V]. Our controller is implemented in a digital computer, which can only handle unit-less numbers. PROBLEM IS THAT THIS unit conversion only applies to ONE LOAD!
+7. Implement code, choose suitable sample time (i.e. controller frequency).
+8. Implement anti-windup in case of presence of I-controller.
+9. Tune parameters.
